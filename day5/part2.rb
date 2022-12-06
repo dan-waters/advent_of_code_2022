@@ -25,6 +25,7 @@ open('instructions.txt').readlines(chomp: true).each do |line|
 end
 
 instructions.each do |instruction|
+  # stacks[instruction[:to_column]] += stacks[instruction[:from_column]].pop(instruction[:n])
   temp_stack = []
   instruction[:n].times do
     temp_stack.unshift(stacks[instruction[:from_column]].pop)
